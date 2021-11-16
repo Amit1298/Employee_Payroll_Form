@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new_home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;
+0,200;0,300;0,400;0,600;1,500&display=swap" rel="stylesheet">
+    <title>Employee Payroll Form</title>
+</head>
+
+<body>
+    <!-- UC1 -->
+    <header class="header-content header">
+        <div class="logo-content">
+            <img src="logo.jpg" alt="" style="width: 50px; height: 40px;">
+            <div>
+                <span class="emp-text">Employee</span><br>
+                <span class="emp-text emp-payroll">Payroll</span>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <!-- UC2 -->
+        <div class="header-content">
+            <div class="emp-detail-text">
+                Employee Details <div class="emp-count">10</div>
+            </div>
+            <a href="new_payroll_form_js.html" class="add-button"><img src="addimg.jpg" alt="">Add User</a>
+        </div><!--   header-Content -->
+        <div class="table-main">
+            <table id="display" class="table">
+                <!-- UC3 -->
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Start Date</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td><img class="profile" alt="" src="profile1.jpg" style="width: 70px;
+                        height: 52px;" ></td>
+                    <td>Amit Kumar</td>
+                    <td>Male</td>
+                    <td><div class="dept-label">HR</div>
+                         <div class="dept-label">Finance</div></td>
+                         <td>3000000</td>
+                         <td>15 Nov 2021</td>
+                         <td>
+                             <img id="1" onclick="remove(this)" alt="delete" src="delete.png">
+                             <img id="1" onclick="update(this)" alt="edit" src="edit.png">
+                         </td>
+                </tr>
+            </table>
+        </div><!--   table-main -->
+    </div><!--   main-content -->
+ <script src="new_home.js"></script>
+ <script src="utility.js"></script>
+ <script src="site_properties.js"></script>
+ <script src="Employeepayroll.js"></script>
+    
+</body>
+
+</html>
