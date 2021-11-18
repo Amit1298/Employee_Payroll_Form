@@ -19,8 +19,8 @@
             </div>
         </div>
     </header>
-    <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event); return false">
+    <div id="formId" class="form-content">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save(event); return false">
             <!-- uc2 -->
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
@@ -35,15 +35,15 @@
                 <div class="profile-radio-content">
                      <label>
                          <input type="radio" id="profile1" name="profile" value="Profile1.jpg" required>
-                         <img class="profile" id="imgage1" src="profile1.jpg">
+                         <img style="width: 50px; height: 50px;" class="profile" id="imgage1" src="profile1.jpg">
                      </label>
                      <label>
                         <input type="radio" id="profile2" name="profile" value="Profile2.jpg" required>
-                        <img class="profile" id="imgage2" src="profile2.jpg">
+                        <img style="width: 50px; height: 50px;" class="profile" id="imgage2" src="profile2.jpg">
                     </label>
                     <label>
                         <input type="radio" id="profile3" name="profile" value="Profile3.jpg" required>
-                        <img class="profile" id="imgage3" src="profile3.jpg">
+                        <img style="width: 50px; height: 50px;" class="profile" id="imgage3" src="profile3.jpg">
                     </label>
                 </div>
             </div>
@@ -110,13 +110,19 @@
                         <option value="nov">November</option>
                         <option value="dec">December</option>
                     </select>
-                    <select id="day" name="Day">
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option> 
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
+                    <select id="year" name="Year">
+                        <option value="2020">2010</option>
+                        <option value="2021">2011</option>
+                        <option value="2023">2012</option>
+                        <option value="2024">2013</option> 
+                        <option value="2025">2014</option>
+                        <option value="2026">2015</option>
+                        <option value="2020">2016</option>
+                        <option value="2021">2017</option>
+                        <option value="2023">2018</option>
+                        <option value="2024">2019</option> 
+                        <option value="2025">2020</option>
+                        <option value="2026">2021</option>
                     </select>
                 </div>
             </div>
