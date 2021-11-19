@@ -24,15 +24,15 @@ const createInnerHtml = () => {
     
     <tr>
                     <td><img class="profile" alt="" src="${empPayrollData._profilePic}"></td>
-                    <td>${employeePayrollData._name}</td>
-                    <td>${employeePayrollData._gender}</td>
-                    <td><div class="dept-label">${employeePayrollData._department[0]}</div>
-                         <div class="dept-label">${employeePayrollData._department[1]}</div></td>
-                         <td>${employeePayrollData._salary}</td>
-                         <td>${employeePayrollData._startDate}</td>
+                    <td>${empPayrollData._name}</td>
+                    <td>${empPayrollData._gender}</td>
+                    <td><div class="dept-label">${empPayrollData._department[0]}</div>
+                         <div class="dept-label">${empPayrollData._department[1]}</div></td>
+                         <td>${empPayrollData._salary}</td>
+                         <td>${empPayrollData._startDate}</td>
                          <td>
-                             <img name="${employeePayrollData._id}" onclick="remove(this)" alt="delete" src="delete.png">
-                             <img name="${employeePayrollData._id}" onclick="update(this)" alt="edit" src="edit.png">
+                             <img id="${empPayrollData._id}" onclick="remove(this)" alt="delete" src="delete.png">
+                             <img id="${empPayrollData._id}" onclick="update(this)" alt="edit" src="edit.png">
                          </td>
                 </tr>`;
         }
@@ -53,7 +53,9 @@ const getDeptHtml = (deptList) =>{
 const remove = (node) => {
     let empPayrollData = empPayrollList.find(empData => empData._id == node.id);
     if(!empPayrollData) return;
-    const index = empPayrollList.map(empData => empData._id).indexOf(empPayrollData._id);
+    const index = empPayrollList
+                  .map(empData => empData._id)
+                  .indexOf(empPayrollData._id);
     empPayrollList.splice(index, 1);
     localStorage.setItem("EmployeePayrollList",JSON.stringify(empPayrollList));
     document.querySelector(".emp-count").textContent = empPayrollList.length;
